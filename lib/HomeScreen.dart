@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text('Apple'),
                 ),
                 ListTile(
-                  leading: Icon(Icons.breakfast_dining),
+                  leading: Icon(Icons.facebook),
                   title: Text('Breakfast'),
                 ),
                 ListTile(
