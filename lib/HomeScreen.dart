@@ -13,41 +13,47 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Photo Gallery',style: TextStyle(color: Colors.white),),
-          backgroundColor: Colors.blue,
+          title: Text(
+            'My Shopping List',
+            style: TextStyle(color: Colors.white),
+          ),
           centerTitle: true,
+          backgroundColor: Colors.blue,
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.shopping_cart,
+                  color: Colors.white,
+                ))
+          ],
         ),
         body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Welcome to My Photo Gallery',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-              SizedBox(height: 30,),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search for photos',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-
-                  )
+            padding: const EdgeInsets.all(10.0),
+            child: ListView(
+              children: const [
+                ListTile(
+                  leading: Icon(Icons.laptop),
+                  title: Text('Laptop'),
                 ),
-
-              ),
-              GridView.count(
-                  crossAxisCount: 3,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.red
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
-        ),
+                ListTile(
+                  leading: Icon(Icons.smartphone),
+                  title: Text('Mobile'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.apple),
+                  title: Text('Apple'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.facebook),
+                  title: Text('Facbook'),
+                ),
+                ListTile(
+                  leading: Icon(Icons.watch),
+                  title: Text('Watch'),
+                ),
+              ],
+            )),
       ),
     );
   }
